@@ -69,6 +69,16 @@ Example of filename for `Keep On Skanking`:
 10 - Comma Comma.mp3
 ----
 
+=== 2.4 awk
+
+After research I refind this dark tool. I had choosen to never learn to use this, because it's a very hard tool.
+
+[source,man]
+----
+NAME
+       awk — pattern scanning and processing language
+----
+
 == Other
 
 === Pattern matching
