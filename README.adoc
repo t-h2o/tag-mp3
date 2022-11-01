@@ -6,4 +6,25 @@ I recently downloaded with torrent the Bob Marley\'s discography and there is al
 
 === 1. Find a language
 
-For this type of use (files manipulation), bash script is a good way
+For this type of use (files manipulation), bash script is a good way.
+
+=== 2. Collect data
+
+I know `scanf` from C language. You give a patter to `scanf` and he collectes data. I search something like scanf for bash script.
+
+I found on https://www.reddit.com/r/bash/comments/gxygww/why_isnt_there_scanf_or_equivalent_in_bash/[reddit] an example.
+
+[source, bash]
+----
+#!/bin/bash
+
+pattern="Fan: (.+) rpm CPU die temperature: (.+) C"
+if [[ "Fan: fann rpm CPU die temperature: 42 C" =~ $pattern ]]; then
+    fan=${BASH_REMATCH[1]}
+    cpu=${BASH_REMATCH[2]}
+fi
+echo "$fan" "$cpu"
+----
+
+[quote]
+I use https://www.shellcheck.net/[shellcheck] for get good practices for creating shell scripts.
