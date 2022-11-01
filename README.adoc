@@ -1,0 +1,3 @@
+= mp3 tag with name file
+
+I recently downloaded with torrent the Bob Marley\'s discography and there is all metadata in the name file but not the mp3 file. My goal is to parse name file for tagging the mp3 files.
