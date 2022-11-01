@@ -68,3 +68,21 @@ Example of filename for `Keep On Skanking`:
 09 - Vs. Lee Scratch Perry Dreamland (Featuring Bunny Wailer).mp3
 10 - Comma Comma.mp3
 ----
+
+== Other
+
+=== Pattern matching
+
+1. Use the bash shell
+2. Enable the `extglob`
+[source,bash]
+----
+shopt -s extglob
+----
+
+[start=3]
+3. Try to list all but not mp3 files with
+[source,bash]
+----
+ls !(*.mp3)
+----
