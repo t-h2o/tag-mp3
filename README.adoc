@@ -43,3 +43,28 @@ for filename in ./*; do
 	echo "${filename}"
 done
 ----
+
+=== 2.3 Parse the filename
+
+For each tracks in an album, we have to collect:
+* Title
+* Track number
+We already have:
+* Artist
+* Album
+* Year
+
+Example of filename for `Keep On Skanking`:
+[source]
+----
+01 - All In One.mp3
+02 - Keep On Moving.mp3
+03 - Keep On Skanking.mp3
+04 - Shocks Of Mighty (Soul Almighty Ve.mp3
+05 - Brand New Second Hand.mp3
+06 - Jungle Dub.mp3
+07 - Satisfy My Soul Babe (Version).mp3
+08 - Dracula (Version).mp3
+09 - Vs. Lee Scratch Perry Dreamland (Featuring Bunny Wailer).mp3
+10 - Comma Comma.mp3
+----
