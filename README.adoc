@@ -47,9 +47,12 @@ done
 === 2.3 Parse the filename
 
 For each tracks in an album, we have to collect:
+
 * Title
 * Track number
+
 We already have:
+
 * Artist
 * Album
 * Year
