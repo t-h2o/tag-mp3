@@ -6,3 +6,7 @@ if [[ "Fan: fann rpm CPU die temperature: 42 C" =~ $pattern ]]; then
     cpu=${BASH_REMATCH[2]}
 fi
 echo "$fan" "$cpu"
+
+for filename in ./*; do
+	echo "${filename}"
+done

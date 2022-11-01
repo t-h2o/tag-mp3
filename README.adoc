@@ -10,6 +10,8 @@ For this type of use (files manipulation), bash script is a good way.
 
 === 2. Collect data
 
+=== 2.1 scanf
+
 I know `scanf` from C language. You give a patter to `scanf` and he collectes data. I search something like scanf for bash script.
 
 I found on https://www.reddit.com/r/bash/comments/gxygww/why_isnt_there_scanf_or_equivalent_in_bash/[reddit] an example.
@@ -28,3 +30,16 @@ echo "$fan" "$cpu"
 
 [quote]
 I use https://www.shellcheck.net/[shellcheck] for get good practices for creating shell scripts.
+
+=== 2.2 A loop for each files
+
+I need a loop for each files. I found an exmample on https://w3guides.com/tutorial/bash-for-each-file-in-folder#bash-for-each-file-in-folder[w3guides.com]
+
+[source, bash]
+----
+#!/bin/bash
+
+for filename in ./*; do
+	echo "${filename}"
+done
+----
