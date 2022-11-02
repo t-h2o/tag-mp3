@@ -42,7 +42,7 @@ echo "$fan" "$cpu"
 ----
 
 [quote]
-I use https://www.shellcheck.net/[shellcheck] for get good practices for creating shell scripts.
+I use https://www.shellcheck.net/[shellcheck] to get good practices for creating shell scripts.
 
 === 2.2 A loop for each file
 
