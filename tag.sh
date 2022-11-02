@@ -1,12 +1,8 @@
 #!/bin/bash
 
-pattern="Fan: (.+) rpm CPU die temperature: (.+) C"
-if [[ "Fan: fann rpm CPU die temperature: 42 C" =~ $pattern ]]; then
-    fan=${BASH_REMATCH[1]}
-    cpu=${BASH_REMATCH[2]}
-fi
-echo "$fan" "$cpu"
+for filename in ./*\.mp3; do
 
-for filename in ./*; do
 	echo "${filename}"
+	echo "${filename}" | awk '{printf "Track number: %d", substr($1, 3)}  {printf "\n"}'
+	echo "${filename}" | awk '{printf "Titel: " }{i = 3} {while (i + 1 <= NF ) {printf "%s ", $i; i++}} {printf "%s\n", substr($i, 0, length($i) - 4)}'
 done
