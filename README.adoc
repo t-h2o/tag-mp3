@@ -1,4 +1,4 @@
-= MP3 tag with name file
+= MP3 tag with file name
 
 ifdef::env-github[]
 ++++
@@ -13,7 +13,7 @@ image::bob.png[align=center, link="https://youtu.be/oqVy6eRXc7Q"]
 endif::[]
 
 
-I recently downloaded with torrent the Bob Marley\'s discography and there is all metadata in the name file but not the MP3 file. My goal is to parse name file for tagging the MP3 files.
+I recently downloaded with torrent the Bob Marley\'s discography and there is all metadata in the file name but not the MP3 file. My goal is to parse file name for tagging the MP3 files.
 
 == Reasoning for ruilding my script
 
