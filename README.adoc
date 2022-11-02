@@ -13,19 +13,19 @@ image::bob.png[align=center, link="https://youtu.be/oqVy6eRXc7Q"]
 endif::[]
 
 
-I recently downloaded with torrent the discography of Bob Marley and there is all the metadata in the file name, but not in the mp3 file. My goal is to collect the file name to tag the mp3 files.
+I have recently downloaded the discography of Bob Marley through torrent and there is all the metadata within the torrent file, but not in the mp3 one. My goal is to collect the file name to tag the mp3 files.
 
-== Reasoning for the building of my script
+== My approach of creating my script
 
-=== 1. Find a language
+=== 1. Find a scripting language
 
-For this type of use (file manipulation), the bash script is a good way.
+For this kind of use (file manipulation), the bash script is a good choice.
 
 === 2. Collect data
 
 === 2.1 scanf
 
-I know `scanf` from the C language. You give `scanf` a pattern` and it collects the data. I'm looking for something like `scanf` for bash script.
+I already know about `scanf` function as I have used it in the C language. You give `scanf` a pattern` and it collects the data. I'm looking for something like `scanf` for bash script.
 
 I found on https://www.reddit.com/r/bash/comments/gxygww/why_isnt_there_scanf_or_equivalent_in_bash/[reddit] an example.
 
@@ -44,9 +44,9 @@ echo "$fan" "$cpu"
 [quote]
 I use https://www.shellcheck.net/[shellcheck] to get good practices for creating shell scripts.
 
-=== 2.2 A loop for each file
+=== 2.2 A loop through each file
 
-I need a loop for each file. I found an exmample on https://w3guides.com/tutorial/bash-for-each-file-in-folder#bash-for-each-file-in-folder[w3guides.com]
+I need a loop through each file. I found an example on https://w3guides.com/tutorial/bash-for-each-file-in-folder#bash-for-each-file-in-folder[w3guides.com]
 
 [source, bash]
 ----
@@ -59,19 +59,19 @@ done
 
 === 2.3 Parse the filename
 
-For each track in an album, we have to collect:
+For each track on an album, we have to collect:
 
-* Title
-* Track number
+* The title
+* The track number
 
 We already have:
 
-* Artist
-* Album
-* Year
+* The artist
+* The album
+* The yar
 
 Example of filename for `Keep On Skanking`:
-[source]
+
 ----
 01 - All In One.mp3
 02 - Keep On Moving.mp3
@@ -87,7 +87,7 @@ Example of filename for `Keep On Skanking`:
 
 === 2.4 awk
 
-After research I refind this dark tool. I had choosen to never learn to use this, because it's a very hard tool.
+After, a few researches I once again found this dark tool. I have had chosen to never learn to use this, because it's a very hard tool.
 
 [source,man]
 ----
@@ -134,10 +134,10 @@ done
 
 # OUTPUT:
 # ./01 - All In One.mp3
-# Titel: All In One
+# Title: All In One
 ----
 
-1. Just print `"Titel: "`.
+1. Just print `"Title: "`.
 2. Set `i = 3`.
 3. `While (i + 1 <= NF)` print each element.
 
@@ -149,7 +149,7 @@ NF: The number of fields in the current record.
 
 == 3. Tag the track
 
-It's the very easy step, after saving `track` and `title`. Just use mp3info for tagging them.
+It's the simplest step, after saving `track` and `title`. Just use `mp3info` for tagging them.
 
 [source,bash]
 ----
@@ -164,13 +164,13 @@ for filename in ./*\.mp3; do
 done
 ----
 
-== Bonus: Collect folder data
+== Bonus: Collect the folder data
 
-We have to collect from the foder
+We have to collect from the folder
 
-* Artist
-* Year of the album
-* Album name
+* The artist
+* The year of the album
+* The album name
 
 The tracks are tidied up like this:
 ----
@@ -186,7 +186,7 @@ Bob Marley - 1970 - African Herbsman
 
 For remove the `./` or `./${foldername}`, we can use `basename`.
 
-== Final script
+== The final script
 
 [source,bash]
 ----
@@ -214,7 +214,7 @@ done
 
 == Conclusion
 
-I said that `awk` is a dark and hard tool. But after spending a few hours on read manuals and manipulating this; I became familiar with him. With this project I learned basic of `awk` and new knowledges on `AsciiDoc` and `bash`.
+As I said `awk` is a dark and a complicated tool. But after spending a few hours reading manuals and manipulating `awk`, I got comfortable with it. With this project I learned basics of `awk` and new knowledge on `AsciiDoc` and `bash`.
 
 === The real conclusion
 
