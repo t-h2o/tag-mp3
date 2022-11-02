@@ -172,6 +172,33 @@ Bob Marley - 1970 - African Herbsman
 ----
 
 For remove the `./` or `./${foldername}`, we can use `basename`.
+
+== Final script
+
+[source,bash]
+----
+#!/bin/bash
+
+for folder in ./Bob*; do
+
+	folder=$(basename "${folder}")
+	artist="Bob Marley"
+	year=$(echo "${folder}" | awk '{printf "%d", $4}')
+	album=$(echo "${folder}" | awk '{i = 6} {while (i <= NF ) {printf "%s ", $i; i++}}')
+
+	for filepath in "${folder}"/*\.mp3; do
+
+		filename=$(basename "${filepath}")
+
+		track=$(echo "${filename}" | awk '{printf "%d", $1}')
+		title=$(echo "${filename}" | awk '{i = 3} {while (i + 1 <= NF ) {printf "%s ", $i; i++}} {printf "%s", substr($i, 0, length($i) - 4)}')
+
+		mp3info -a "${artist}" -l "${album}" -y "${year}" -t "${title}" -n "${track}" "${filepath}"
+		echo mp3info -a "${artist}" -l "${album}" -y "${year}" -t "${title}" -n "${track}" "${filepath}"
+	done
+done
+----
+
 == Other
 
 === Pattern matching
