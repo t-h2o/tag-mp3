@@ -13,7 +13,7 @@ image::bob.png[align=center, link="https://youtu.be/oqVy6eRXc7Q"]
 endif::[]
 
 
-I recently downloaded with torrent the Bob Marley\'s discography and there is all metadata in the file name but not the MP3 file. My goal is to parse file name for tagging the MP3 files.
+I recently downloaded with torrent the discography of Bob Marley and there is all the metadata in the file name, but not in the mp3 file. My goal is to collect the file name to tag the mp3 files.
 
 == Reasoning for ruilding my script
 
