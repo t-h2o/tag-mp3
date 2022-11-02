@@ -19,7 +19,7 @@ I recently downloaded with torrent the discography of Bob Marley and there is al
 
 === 1. Find a language
 
-For this type of use (files manipulation), bash script is a good way.
+For this type of use (file manipulation), the bash script is a good way.
 
 === 2. Collect data
 
