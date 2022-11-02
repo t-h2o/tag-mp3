@@ -199,6 +199,10 @@ for folder in ./Bob*; do
 done
 ----
 
+== Conclusion
+
+I said that `awk` is a dark and hard tool. But after spending a few hours on read manuals and manipulating this; I became familiar with him. With this project I learned basic of `awk` and new knowledges on `AsciiDoc` and `bash`.
+
 == Other
 
 === Pattern matching
