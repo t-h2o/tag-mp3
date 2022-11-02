@@ -25,7 +25,7 @@ For this type of use (file manipulation), the bash script is a good way.
 
 === 2.1 scanf
 
-I know `scanf` from C language. You give a patter to `scanf` and he collectes data. I search something like scanf for bash script.
+I know `scanf` from the C language. You give `scanf` a pattern` and it collects the data. I'm looking for something like `scanf` for bash script.
 
 I found on https://www.reddit.com/r/bash/comments/gxygww/why_isnt_there_scanf_or_equivalent_in_bash/[reddit] an example.
 
