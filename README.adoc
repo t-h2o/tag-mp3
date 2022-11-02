@@ -107,6 +107,33 @@ I find it weird, this time the index start with 1 and not 0.
 
 With the substring I get `01` instead of `./01`. And then I use `%d` of `printf` for convert to a number.
 
+==== 2.4.3 Print the track title
+
+[source,bash]
+----
+#!/bin/bash
+
+for filename in ./*\.mp3; do
+
+	echo "${filename}"
+	echo "${filename}" | awk '{printf "Titel: " }{i = 3} {while (i + 1 <= NF ) {printf "%s ", $i; i++}} {printf "%s\n", substr($i, 0, length($i) - 4)}'
+done
+
+# OUTPUT:
+# ./01 - All In One.mp3
+# Titel: All In One
+----
+
+1. Just print `"Titel: "`.
+2. Set `i = 3`.
+3. `While (i + 1 <= NF)` print each elements.
+
+[quote]
+NF: The number of fields in the current record.
+
+[start=4]
+4. Remove `./mp3`: Substing of the last element, start a the beginning of the string, stop at the end minus four.
+
 == Other
 
 === Pattern matching
