@@ -15,7 +15,7 @@ endif::[]
 
 I recently downloaded with torrent the discography of Bob Marley and there is all the metadata in the file name, but not in the mp3 file. My goal is to collect the file name to tag the mp3 files.
 
-== Reasoning for ruilding my script
+== Reasoning for the building of my script
 
 === 1. Find a language
 
