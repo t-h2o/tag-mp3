@@ -17,13 +17,13 @@ I have recently downloaded the discography of Bob Marley through torrent and the
 
 == My approach of creating my script
 
-=== 1. Find a scripting language
+=== Find a scripting language
 
 For this kind of use (file manipulation), the bash script is a good choice.
 
-=== 2. Collect data
+=== Collect data
 
-=== 2.1 scanf
+=== Scanf
 
 I already know about `scanf` function as I have used it in the C language. You give `scanf` a pattern` and it collects the data. I'm looking for something like `scanf` for bash script.
 
@@ -44,7 +44,7 @@ echo "$fan" "$cpu"
 [quote]
 I use https://www.shellcheck.net/[shellcheck] to get good practices for creating shell scripts.
 
-=== 2.2 A loop through each file
+=== A loop through each file
 
 I need a loop through each file. I found an example on https://w3guides.com/tutorial/bash-for-each-file-in-folder#bash-for-each-file-in-folder[w3guides.com]
 
@@ -57,7 +57,7 @@ for filename in ./*; do
 done
 ----
 
-=== 2.3 Parse the filename
+=== Parse the filename
 
 For each track on an album, we have to collect:
 
@@ -85,7 +85,7 @@ Example of filename for `Keep On Skanking`:
 10 - Comma Comma.mp3
 ----
 
-=== 2.4 awk
+=== awk
 
 After, a few researches I once again found this dark tool. I have had chosen to never learn to use this, because it's a very hard tool.
 
@@ -120,7 +120,7 @@ I find it weird, this time the index start with 1 and not 0.
 
 With the substring I get `01` instead of `./01`. And then I use `%d` of `printf` for convert to a number.
 
-==== 2.4.3 Print the track title
+==== Print the track title
 
 [source,bash]
 ----
@@ -147,7 +147,7 @@ NF: The number of fields in the current record.
 [start=4]
 4. Remove `./mp3`: Substing of the last element, start a the beginning of the string, stop at the end minus four.
 
-== 3. Tag the track
+== Tag the track
 
 It's the simplest step, after saving `track` and `title`. Just use `mp3info` for tagging them.
 
