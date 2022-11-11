@@ -96,7 +96,7 @@ NAME
        awk — pattern scanning and processing language
 ----
 
-==== 2.4.1 Print the track number
+==== Print the track number
 
 For each `.mp3` files:
 
