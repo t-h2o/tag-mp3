@@ -73,6 +73,7 @@ We already have:
 
 Example of filename for `Keep On Skanking`:
 
+[,plain]
 ----
 01 - All In One.mp3
 02 - Keep On Moving.mp3
@@ -180,6 +181,8 @@ We have to collect from the folder
 * The album name
 
 The tracks are tidied up like this:
+
+[,plain]
 ----
 Bob Marley - 1967 - Keep On Skanking
 ├── 01 - All In One.mp3
