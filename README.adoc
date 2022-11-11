@@ -248,15 +248,17 @@ image::cmus.png["cmus view"]
 
 === Pattern matching
 
-1. Use the bash shell
-2. Enable the `extglob`
+. Use the bash shell
+. Enable the `extglob`
+
 [source,bash]
 ----
 shopt -s extglob
 ----
 
 [start=3]
-3. Try to list all but not MP3 files with
+. Try to list all but not MP3 files with
+
 [source,bash]
 ----
 ls !(*.mp3)
